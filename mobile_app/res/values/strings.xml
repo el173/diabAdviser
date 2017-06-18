@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DiabAdviser</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="large_text">Large Text</string>
+    <string name="_">" "</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="user_name">User Name</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_register">Register</string>
+    <string name="e_mail_username_">E-Mail (Username)</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="mobile">Mobile</string>
+    <string name="title_activity_account_confirm">AccountConfirm</string>
+    <string name="enter_confirm_code_that_was_send_via_e_mal">Enter confirm code that was send via e-mal</string>
+    <string name="enter_confirm_code_that_was_send_via_e_mail">Enter confirm code that was send via e mail</string>
+    <string name="confirm_code">Confirm Code</string>
+    <string name="to_activate_your_account_">"To Activate Your Account "</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_">"Confirm "</string>
+    <string name="e_mail_address">E-mail Address</string>
+    <string name="autocompletetextview">AutoCompleteTextView</string>
+    <string name="doctor">Doctor</string>
+    <string name="small_text">Small Text</string>
+    <string name="title_activity_change_doctor">ChangeDoctor</string>
+    <string name="select_doctor">Select Doctor</string>
+    <string name="view_messaages">View Messaages</string>
+    <string name="get_new_tip">Get New Tip</string>
+    <string name="get_health_tip">Get Health Tip</string>
+    <string name="view_messagess">View Messagess</string>
+    <string name="view_messages">View Messages</string>
+    <string name="select_a_doctor">Select a Doctor</string>
+    <string name="save_change">Save Change</string>
+    <string name="title_activity_send_sugarate">SendSugarate</string>
+    <string name="enter_your_today_sugar_rate">Enter Your Today Sugar Rate</string>
+    <string name="doctor_apos_s_name_hospital_amp_charge_per_tip_are_shown_down">Doctor&amp;apos;s Name, Hospital &amp;amp; Charge per Tip are shown down</string>
+    <string name="doctor_name_hospital_and_charge_per_health_tip_are_shown_down">Doctor Name-Hospital and Charge per Health Tip are shown down</string>
+    <string name="_250_characters_">"250 characters "</string>
+    <string name="addtional_message_">"Additional Message "</string>
+    <string name="addtional_message_optional_">Additional Message (optional)</string>
+    <string name="pay_amp_send">Pay &amp; Send&amp;amp; Send</string>
+    <string name="pay_and_send">Pay and Send</string>
+    <string name="_250_characters_max">250 characters max</string>
+    <string name="title_activity_test_paypal_home">TestPaypalHome</string>
+    <string name="send_sugar_rate">Send Sugar Rate</string>
+    <string name="view_health_tips">View Health Tips</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="enteryour_sugar_rate_mg_dl_">EnterYour Sugar Rate (mg/dL)</string>
+    <string name="title_activity_view_messages">ViewMessages</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="messeges">Messeges</string>
+    <string name="date_sugar_rate_read_status">Date-Sugar Rate-Read Status</string>
+    <string name="messages">Messages</string>
+    <string name="change_password">Change Password</string>
+    <string name="title_activity_change_password">ChangePassword</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+
+</resources>

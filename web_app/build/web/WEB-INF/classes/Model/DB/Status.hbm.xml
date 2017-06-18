@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-Dec-2015 11:17:32 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.DB.Status" table="status" catalog="diabadviser" optimistic-lock="version">
+        <id name="iduserStatus" type="java.lang.Integer">
+            <column name="iduserStatus" />
+            <generator class="identity" />
+        </id>
+        <property name="userStatus" type="string">
+            <column name="userStatus" length="45" />
+        </property>
+        <set name="users" table="user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userStatus_iduserStatus" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.User" />
+        </set>
+        <set name="doctorHasPatients" table="doctor_has_patient" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="status_iduserStatus" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.DoctorHasPatient" />
+        </set>
+        <set name="maintaincharges" table="maintaincharge" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="status_iduserStatus" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.Maintaincharge" />
+        </set>
+    </class>
+</hibernate-mapping>
