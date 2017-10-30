@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-Dec-2015 11:17:32 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.DB.Paidstatus" table="paidstatus" catalog="diabadviser" optimistic-lock="version">
+        <id name="idpaidStatus" type="java.lang.Integer">
+            <column name="idpaidStatus" />
+            <generator class="identity" />
+        </id>
+        <property name="paidStatus" type="string">
+            <column name="paidStatus" length="45" />
+        </property>
+        <set name="tippayments" table="tippayment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paidStatus_idpaidStatus" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.Tippayment" />
+        </set>
+    </class>
+</hibernate-mapping>

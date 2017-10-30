@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-Dec-2015 11:17:32 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.DB.Sugarrate" table="sugarrate" catalog="diabadviser" optimistic-lock="version">
+        <id name="idsugarrate" type="java.lang.Integer">
+            <column name="idsugarrate" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="doctorHasPatient" class="Model.DB.DoctorHasPatient" fetch="select">
+            <column name="doctor_has_patient_id" not-null="true" />
+        </many-to-one>
+        <property name="date" type="string">
+            <column name="date" length="45" />
+        </property>
+        <property name="sugarRate" type="java.lang.Double">
+            <column name="sugar_rate" precision="22" scale="0" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" length="65535" />
+        </property>
+        <property name="isRead" type="java.lang.Boolean">
+            <column name="is_read" />
+        </property>
+        <set name="healthtips" table="healthtip" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sugarrate_idsugarrate" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.Healthtip" />
+        </set>
+        <set name="tippayments" table="tippayment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sugarrate_idsugarrate" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.Tippayment" />
+        </set>
+    </class>
+</hibernate-mapping>

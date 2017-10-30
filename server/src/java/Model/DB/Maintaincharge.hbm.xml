@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-Dec-2015 11:17:32 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.DB.Maintaincharge" table="maintaincharge" catalog="diabadviser" optimistic-lock="version">
+        <id name="idadminCharge" type="java.lang.Integer">
+            <column name="idadminCharge" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="status" class="Model.DB.Status" fetch="select">
+            <column name="status_iduserStatus" not-null="true" />
+        </many-to-one>
+        <property name="adminCharge" type="java.lang.Double">
+            <column name="adminCharge" precision="22" scale="0" />
+        </property>
+        <property name="addedDate" type="timestamp">
+            <column name="addedDate" length="19" />
+        </property>
+        <set name="tippayments" table="tippayment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="maintainCharge_idadminCharge" not-null="true" />
+            </key>
+            <one-to-many class="Model.DB.Tippayment" />
+        </set>
+    </class>
+</hibernate-mapping>
