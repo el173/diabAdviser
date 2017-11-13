@@ -18,6 +18,8 @@
     ],
     "cordovaPlatforms": [],
     "dependencies": {
+        "card.io.cordova.mobilesdk": "^2.1.0",
+        "com.paypal.cordova.mobilesdk": "^3.5.0",
         "cordova-android": "^6.2.3",
         "cordova-plugin-device": "1.1.4",
         "cordova-plugin-splashscreen": "~4.0.1",
@@ -32,7 +34,8 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "com.paypal.cordova.mobilesdk": {}
         },
         "platforms": [
             "android",
